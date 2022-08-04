@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5948cd65-deeb-41c3-9749-de74868471de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bond_holdings/data/johns_IRA.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bond_holdings/data/johns_IRA.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bond_holdings/data/joint_account.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bond_holdings/data/joint_account.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bond_holdings/data/marys_IRA.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bond_holdings/data/marys_IRA.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bond_holdings/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/down_loads/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/bond.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/fidelity_web_access.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/format.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/payment_source.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/pdf_document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/portfolio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/portfolio_builder_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financial_utilities/portfolio_reporter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/BestIncome.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/BestIncome2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/PortfolioBuilderLogic.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/Qt Designer Setup.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/bonds.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/commands.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/exclusions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/instructions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio_builder/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Crmfx1qVNadtzNZ4FP4ELJCSue" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Development/FinancialDevelopment/FidelityPrograms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Development\FinancialDevelopment\FidelityPrograms" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Downloads">
+    <configuration name="BondHoldings" type="PythonConfigurationType" factoryName="Python">
+      <module name="FidelityPrograms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Development\FinancialDevelopment\FidelityPrograms\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bond_holdings" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bond_holdings/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Downloads" type="PythonConfigurationType" factoryName="Python">
+      <module name="FidelityPrograms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Development\FinancialDevelopment\FidelityPrograms\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/down_loads" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/down_loads/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PortfolioBuilder" type="PythonConfigurationType" factoryName="Python">
+      <module name="FidelityPrograms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Development\FinancialDevelopment\FidelityPrograms\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/portfolio_builder" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/portfolio_builder/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.PortfolioBuilder" />
+      <item itemvalue="Python.BondHoldings" />
+      <item itemvalue="Python.Downloads" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5948cd65-deeb-41c3-9749-de74868471de" name="Changes" comment="" />
+      <created>1659569184346</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659569184346</updated>
+      <workItem from="1659569187773" duration="3831000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FidelityPrograms$Downloads.coverage" NAME="Downloads Coverage Results" MODIFIED="1659572594050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/down_loads" />
+    <SUITE FILE_PATH="coverage/FidelityPrograms$BondHoldings.coverage" NAME="BondHoldings Coverage Results" MODIFIED="1659570851738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bond_holdings" />
+    <SUITE FILE_PATH="coverage/FidelityPrograms$PortfolioBuilder.coverage" NAME="PortfolioBuilder Coverage Results" MODIFIED="1659570458149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/portfolio_builder" />
+  </component>
+</project>

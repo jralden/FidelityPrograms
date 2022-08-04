@@ -2,7 +2,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 import datetime
 import numpy as np
-import constants as K
+import financial_utilities.constants as K
 if TYPE_CHECKING:
     from portfolio import PortfolioItem
     from bond import Bond

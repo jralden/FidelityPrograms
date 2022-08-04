@@ -3,11 +3,11 @@ import sys, os, datetime,  tkinter, tkinter.simpledialog
 from enum import Enum
 
 # sys.path.append("D:/Development/FinancialDevelopment/FinancialUtilities/financial_utilities")
-import constants as K
-from bond import Bond, BondGroup
-from portfolio import Portfolio
-from pdf_document import PDFDocument
-from format import Format as F
+import financial_utilities.constants as K
+from financial_utilities.bond import Bond, BondGroup
+from financial_utilities.portfolio import Portfolio
+from financial_utilities.pdf_document import PDFDocument
+from financial_utilities.format import Format as F
 
 
 class InputSyntaxError(Exception):

@@ -2,13 +2,11 @@ from typing import *
 import sys, os, datetime, csv, tkinter, tkinter.simpledialog
 from enum import Enum
 
-# todo: make financial_utilities a real package that pip can install
-sys.path.append("D:/Development/FinancialDevelopment/FinancialUtilities/financial_utilities")
-import constants as K
-from portfolio import Portfolio, PortfolioItem
-from pdf_document import PDFDocument
-from format import Format as F
-import constants as K
+
+import financial_utilities.constants as K
+from  financial_utilities.portfolio import Portfolio, PortfolioItem
+from  financial_utilities.pdf_document import PDFDocument
+from  financial_utilities.format import Format as F
 
 cwd = os.getcwd()
 data_file_path = os.path.join(cwd, "data")

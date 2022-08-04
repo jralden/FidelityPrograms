@@ -1,10 +1,10 @@
 import os
 # from typing import *
-from pdf_document import PDFDocument
+from financial_utilities.pdf_document import PDFDocument
 # from portfolio import Portfolio, PortfolioItem
 import numpy as np
 import datetime
-import constants as K
+import financial_utilities.constants as K
 
 _bond_line = [
         ["cusip", 12, lambda item: item.cusip],
