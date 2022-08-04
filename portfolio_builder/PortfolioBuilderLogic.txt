@@ -1,0 +1,12 @@
+Portfolio Builder
+	Reads bond.csv file => source_bond_group  (BondGroup)
+	Reads historical_bonds.csv
+	merge historical into source_bond_group
+
+	do_bond_rankings()
+
+
+		save_portfolio:  moves all bonds used to historical_bonds.csv
+
+
+	
