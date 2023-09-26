@@ -3,13 +3,19 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
+# from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import time
 import undetected_chromedriver as uc
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import Select
+# from selenium.webdriver.support.ui import Select
+
+
+def signOff(webdriver: webdriver.Chrome):
+    webdriver.find_element(By.CSS_SELECTOR, ".pntlt > .pnlogin > .pnls > a").click()
+    pass
+
 
 class FidelityWebAccess:
 
@@ -46,7 +52,7 @@ class FidelityWebAccess:
                 os.remove(file_path)
 
     @staticmethod
-    def locate_file(directory_path: str, partial_match: str, file_type: str) -> str:
+    def locate_file(directory_path: str, partial_match: str, file_type: str) -> str | None:
         for file in os.listdir(directory_path):
             if file.endswith(file_type) and file.startswith(partial_match):
                 return directory_path + "/" + file
@@ -71,7 +77,7 @@ class FidelityWebAccess:
             EC.element_to_be_clickable((By.CSS_SELECTOR, ".posweb-grid_top-download-button")))
         self.driver.find_element(By.CSS_SELECTOR, ".posweb-grid_top-download-button").click()
 
-        if should_signOff: signOff(self.driver)
+        if should_signOff: signOff()
 
         time.sleep(4)  # needs some time to appear in the directory
         results_file_path = self.locate_file(download_folder, "Portfolio_Positions", ".csv")
@@ -191,7 +197,7 @@ class FidelityWebAccess:
         self.driver.find_element(By.CSS_SELECTOR, "#Corporate_Investment_Grade_Sec #adv_SeeResults").click()
         self.driver.find_element(By.LINK_TEXT, "Download Data to Spreadsheet").click()
         # region ------------------------- download the data -------------------------#
-        if should_signOff: signOff(self.driver)
+        if should_signOff: signOff()
 
         time.sleep(4)  # needs some time to appear in the directory
         self.move_and_rename_file(search_results_file_path, portfolio_builder_bonds_csv)

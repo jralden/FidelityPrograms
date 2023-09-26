@@ -1,12 +1,11 @@
 from typing import *
-import sys, os, datetime, csv, tkinter, tkinter.simpledialog
-from enum import Enum
-
-
+import os
+import csv
+# from enum import Enum
 import financial_utilities.constants as K
-from  financial_utilities.portfolio import Portfolio, PortfolioItem
-from  financial_utilities.pdf_document import PDFDocument
-from  financial_utilities.format import Format as F
+from financial_utilities.portfolio import Portfolio, PortfolioItem
+from financial_utilities.pdf_document import PDFDocument
+# from  financial_utilities.format import Format as F
 
 cwd = os.getcwd()
 data_file_path = os.path.join(cwd, "data")
@@ -16,12 +15,15 @@ K.SHOW_AVAILABILITY = False
 def clean_int(int_string: str) -> int:
     return int(int_string.replace(",", ""))
 
+
 def clean_float(float_string: str) -> float:
     return float(float_string.replace(",", ""))
 
+
 def launch_report(report_file_path) -> None:
-    # launch the pdf file for the report in the browser
-    os.system(f"start {report_file_path}")
+    """ in macOS launch the pdf file for the report in the browser """
+    os.system(f"open {report_file_path}")
+
 
 def save_report(portfolio: Portfolio, title=None, detail=True) -> None:
     theTitle = title if title is not None else portfolio.title
@@ -30,6 +32,7 @@ def save_report(portfolio: Portfolio, title=None, detail=True) -> None:
     portfolio.make_analysis_report(doc, theTitle, detail)
     doc.output_document()
     launch_report(output_file_path)
+
 
 def load_csv_file(file_path: str) -> list[list[str]]:
     """
@@ -46,8 +49,10 @@ def load_csv_file(file_path: str) -> list[list[str]]:
         csv_file.close()
     return theList
 
-def process_account(account_name: str)-> Portfolio:
+
+def process_account(account_name: str) -> Portfolio:
     file_path = os.path.join(data_file_path, f"{account_name}.csv")
+    print(f"processing {file_path}")
     portfolio = Portfolio()
     portfolio.title = account_name
     items = load_csv_file(file_path)
@@ -60,6 +65,7 @@ def process_account(account_name: str)-> Portfolio:
 
     save_report(portfolio, title=portfolio.title, detail=True)
     return portfolio
+
 
 def main() -> None:
     K.IS_TAXABLE = False

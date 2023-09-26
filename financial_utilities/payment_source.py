@@ -1,11 +1,17 @@
-from __future__ import annotations
-from typing import TYPE_CHECKING
+# from __future__ import annotations
+# from typing import TYPE_CHECKING
 import datetime
 import numpy as np
 import financial_utilities.constants as K
+"""
 if TYPE_CHECKING:
     from portfolio import PortfolioItem
     from bond import Bond
+"""
+"""
+from  financial_utilities.portfolio import PortfolioItem
+from  financial_utilities.bond import Bond
+"""
 
 
 class PaymentSource:
@@ -19,32 +25,32 @@ class PaymentSource:
    """
 
     def __init__(self, purchase_date) -> None:
-        self._cusip: str
-        self._description: str
+        self._cusip: str = ""
+        self._description: str = ""
 
-        self._maturity_date: str
-        self._maturity_year: int
-        self._maturity_day_of_month: int
-        self._maturity_month: int
-        self._first_coupon_month: int
+        self._maturity_date: str = ""
+        self._maturity_year: int = 0
+        self._maturity_day_of_month: int = 0
+        self._maturity_month: int = 0
+        self._first_coupon_month: int = 0
         # self.process_maturity_date(self)
 
-        self._purchase_year: int
-        self._purchase_day_of_month: int
-        self._purchase_month: int
-        self._purchase_date: str
+        self._purchase_year: int = 0
+        self._purchase_day_of_month: int = 0
+        self._purchase_month: int = 0
+        self._purchase_date: str = ""
         # self.process_purchase_date(self, purchase_date)
 
-        self._coupon: float
-        self._yearly_income: float
-        self._ask: float
-        self._sp_rating: str
-        self._payment_schedule: np.ndarray
-        self._total_interest: float
-        self._coupon_matrix: np.ndarray
-        self._total_return_pretax: float
-        self._total_return_posttax: float
-        self._profit: float
+        self._coupon: float = 0.0
+        self._yearly_income: float = 0.0
+        self._ask: float = 0.0
+        self._sp_rating: str = ""
+        self._payment_schedule: np.ndarray = np.zeros([K.YEARS + 1, 13], float)
+        self._total_interest: float = 0.0
+        self._coupon_matrix: np.ndarray = np.zeros([K.YEARS + 1, 13], float)
+        self._total_return_pretax: float = 0.0
+        self._total_return_posttax: float = 0.0
+        self._profit: float = 0.0
 
     @property
     def cusip(self) -> str:
@@ -125,14 +131,18 @@ class PaymentSource:
     def total_return_posttax(self) -> float:                         # per 1000 bonds
         return self._total_return_posttax
 
-    def get_coupon_months(self) -> Tuple[int, int]:
+    def total_interest(self, number_bonds: int) -> float:
+        return self._total_interest * number_bonds
+
+    def get_coupon_months(self) -> tuple[int, int]:
         """return the months that coupons are paid in lowest to the highest order"""
         fcm = self.first_coupon_month
         if fcm >= 7: return fcm - 6, fcm
         return fcm, fcm + 6
 
     @staticmethod
-    def process_maturity_date(payment_source: Bond | PortfolioItem) -> None:
+    # def process_maturity_date(payment_source: Bond | PortfolioItem) -> None:
+    def process_maturity_date(payment_source) -> None:
         # maturity_year
         _s = payment_source.maturity_date.split("/")
         payment_source._maturity_year = int(_s[2])
@@ -213,5 +223,3 @@ class PaymentSource:
             self._total_return_pretax = 1000 + self.total_interest(1000)
             self._total_return_posttax = self.total_return_pretax
             self._profit = self.total_return_posttax - (self.ask * 10)
-
-

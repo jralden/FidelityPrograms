@@ -1,10 +1,11 @@
 import os
 # from typing import *
 from financial_utilities.pdf_document import PDFDocument
-# from portfolio import Portfolio, PortfolioItem
 import numpy as np
 import datetime
 import financial_utilities.constants as K
+from financial_utilities.portfolio import PortfolioItem
+
 
 _bond_line = [
         ["cusip", 12, lambda item: item.cusip],
@@ -48,6 +49,7 @@ def print_bond_detail_summary(doc: PDFDocument, item) -> None:
 
     doc.line(line)
 
+
 def print_income_matrix(doc: PDFDocument, income_matrix: np.ndarray) -> None:
 
     def printTheHeading() -> None:
@@ -84,6 +86,7 @@ def print_income_matrix(doc: PDFDocument, income_matrix: np.ndarray) -> None:
     tfay = ' ' * 111 + tfay
     doc.line(f"total {tfay}")
 
+
 def analysis_income_by_bond(doc: PDFDocument, portfolio) -> None:
     doc.add_page()
     analysis_heading(doc, "Yearly Income By Bond", 12)
@@ -92,6 +95,7 @@ def analysis_income_by_bond(doc: PDFDocument, portfolio) -> None:
         analysis_heading(doc, f"{item.description}", 12)
         print_bond_detail_summary(doc, item)
         print_income_matrix(doc, coupon_matrix)
+
 
 def print_bond_heading(doc: PDFDocument) -> None:
     line = ""
@@ -104,6 +108,7 @@ def print_bond_heading(doc: PDFDocument) -> None:
         line += title.ljust(length)
     doc.line(line)
     doc.line(line_length * "-")
+
 
 def analysis_heading(doc: PDFDocument, heading: str, font_size: int) -> None:
     doc.set_font('Courier', 'B', font_size)

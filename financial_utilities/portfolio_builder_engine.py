@@ -1,9 +1,10 @@
 from typing import *
-import sys, os, datetime,  tkinter, tkinter.simpledialog
+import os, datetime,  tkinter, tkinter.simpledialog
 from enum import Enum
 
 # sys.path.append("D:/Development/FinancialDevelopment/FinancialUtilities/financial_utilities")
 import financial_utilities.constants as K
+from financial_utilities import portfolio
 from financial_utilities.bond import Bond, BondGroup
 from financial_utilities.portfolio import Portfolio
 from financial_utilities.pdf_document import PDFDocument
@@ -44,12 +45,14 @@ class ActionType(Enum):
     Help = 98
     Quit = 99
 
+
 class Action:
     def __init__(self, action_type: ActionType, cusip: str| None, quantity: int | None):
         super().__init__()
         self.action_type = action_type
         self.cusip = cusip
         self.quantity = quantity
+
 
 class PortfolioBuilderEngine:
 
