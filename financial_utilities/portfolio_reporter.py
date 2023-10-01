@@ -25,7 +25,7 @@ _bond_line = [
 
 def launch_report(report_file_path) -> None:
     """ launch the pdf file for the report in the browser"""
-    os.system(f"start {report_file_path}")
+    os.system(f"open {report_file_path}")
 
 
 def format_dollars(num) -> str:

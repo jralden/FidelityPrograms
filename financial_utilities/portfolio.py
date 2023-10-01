@@ -10,6 +10,7 @@ import financial_utilities.constants as K
 from financial_utilities.portfolio_item import PortfolioItem
 from financial_utilities.portfolio_reporter import PortfolioReporter
 
+
 class Portfolio:
 
     def __init__(self):

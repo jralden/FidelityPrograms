@@ -1,7 +1,14 @@
-1,2,3,4,5,6,7,8,9,10,11,
-CUSIP,Description,Maturity,Call Date,Coupon,S&P Rating,QTY,Purchase Date,Purchase Price,Most Recent Price,Most Recent Value,Notes
-539830AF6,LOCKHEED MARTIN CORPBOND                7.75000% 05/01/2026,5/1/2026,n/a,7.75,A-,"62,000",6/8/2022,116.158,114.145,"$70,769.90 ",
-059438AK7,JPMORGAN CHASE &CO  BOND                8.00000% 04/29/2027,4/29/2027,n/a,8,BBB+,"61,000",6/8/2022,116.584,115.263,"$70,310.43 ",
-254687DM5,DISNEY WALT CO      SER B NOTE          7.12500% 04/08/2028,4/8/2028,n/a,7.125,BBB+,"62,000",6/8/2022,116.168,114.189,"$70,797.18 ",
-00440EAC1,CHUBB INA HLDGS INC BOND                8.87500% 08/15/2029,8/15/2029,n/a,8.875,A,"55,000",6/8/2022,129.017,124.957,"$68,726.35 ",
-244199AZ8,DEERE &CO           BOND                8.10000% 05/15/2030,5/15/2030,n/a,8.1,A,"56,000",6/8/2022,127.869,126.116,"$70,624.96 ",
+﻿Account Number,Account Name,Symbol,Description,Quantity,Last Price,Last Price Change,Current Value,Today's Gain/Loss Dollar,Today's Gain/Loss Percent,Total Gain/Loss Dollar,Total Gain/Loss Percent,Percent Of Account,Cost Basis Total,Average Cost Basis,Type
+236772217,John's IRA,SPAXX**,FIDELITY GOVERNMENT MONEY MARKET,3820.66,$1.00,$0.00,$3820.66,n/a,n/a,n/a,n/a,1.10%,n/a,n/a,Cash
+236772217,John's IRA,00440EAC1,CHUBB INA HLDGS INC BOND 8.87500% 08/15/2029,55000,$114.055,-$0.334,$62730.25,-$183.70,-0.30%,-$5676.87,-8.30%,18.02%,$68407.12,--,Cash
+236772217,John's IRA,059438AK7,JPMORGAN CHASE &CO BOND 8.00000% 04/29/2027,61000,$108.224,-$0.211,$66016.64,-$128.71,-0.20%,-$2606.34,-3.80%,18.96%,$68622.98,--,Cash
+236772217,John's IRA,244199AZ8,DEERE &CO BOND 8.10000% 05/15/2030,56000,$115.501,-$0.46,$64680.56,-$257.60,-0.40%,-$4688.68,-6.76%,18.58%,$69369.24,--,Cash
+236772217,John's IRA,254687DM5,DISNEY WALT CO SER B NOTE 7.12500% 04/08/2028,62000,$105.311,-$1.157,$65292.82,-$717.34,-1.09%,-$4691.26,-6.71%,18.75%,$69984.08,--,Cash
+236772217,John's IRA,539830AF6,LOCKHEED MARTIN CORP BOND 7.75000% 05/01/2026,62000,$106.052,+$0.082,$65752.24,+$50.84,+0.07%,-$3062.25,-4.46%,18.89%,$68814.49,--,Cash
+236772217,John's IRA,912797FK8,UNITED STATES TREAS BILLS ZERO CPN 0.00000% 11/16/2023,20000,$99.252,+$0.014,$19850.40,+$2.80,+0.01%,+$336.64,+1.72%,5.70%,$19513.76,--,Cash
+
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution. The spreadsheet is provided for informational purposes only, and is not intended to provide advice, nor should it be construed as an offer to sell, a solicitation of an offer to buy or a recommendation for any security by Fidelity or any third party. Data and information shown is based on information known to Fidelity as of the date it was exported and is subject to change. It should not be used in place of your account statements or trade confirmations and is not intended for tax reporting purposes. For more information on the data included in this spreadsheet, including any limitations thereof, go to Fidelity.com."
+
+"Brokerage services are provided by Fidelity Brokerage Services LLC, 900 Salem Street, Smithfield, RI 02917. Custody and other services provided by National Financial Services LLC. Both are Fidelity Investment companies and members SIPC, NYSE."
+
+"Date downloaded 09/26/2023 8:02 AM ET"

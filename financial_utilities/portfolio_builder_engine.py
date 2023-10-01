@@ -1,5 +1,5 @@
 from typing import *
-import os, datetime,  tkinter, tkinter.simpledialog
+import os, datetime,  tkinter, tkinter.simpledialog, tkinter.filedialog
 from enum import Enum
 
 # sys.path.append("D:/Development/FinancialDevelopment/FinancialUtilities/financial_utilities")
@@ -47,7 +47,7 @@ class ActionType(Enum):
 
 
 class Action:
-    def __init__(self, action_type: ActionType, cusip: str| None, quantity: int | None):
+    def __init__(self, action_type: ActionType, cusip: str | None, quantity: int | None):
         super().__init__()
         self.action_type = action_type
         self.cusip = cusip
@@ -58,10 +58,14 @@ class PortfolioBuilderEngine:
 
     cwd = os.getcwd()                                                   # get current working directory
     bonds_file_path = os.path.join(cwd, "bonds.csv")                    # keep bonds.csv in the working directory
+    print(f"bonds_file_path: {bonds_file_path}")
     bond_history_file_path = os.path.join(cwd, "historical_bonds.csv")  # keep historical_bonds.csv in the working directory
-    report_file_base = f"C:\\Users\\johnr\\Desktop\\BondReports"        # base directory for per/date report folders
+    print(f"bond_history_file_path: {bond_history_file_path}")
+    report_file_base = os.path.join(cwd, "bond_reports")        # base directory for per/date report folders
+    print(f"report_file_base: {report_file_base}")
     today = datetime.datetime.now().strftime("%Y_%m_%d")
     report_file_directory = os.path.join(report_file_base, f"reports_{today}")
+    print(f"report_file_directory: {report_file_directory}")
     if not os.path.exists(report_file_directory):
         os.makedirs(report_file_directory)
     instructions_file_path = os.path.join(cwd, 'instructions.txt')      # for display to user
@@ -220,13 +224,13 @@ class PortfolioBuilderEngine:
     # region  ----------------------- Action Execution --------------------------------#
 
     def save_report(self, title=None, detail=True) -> None:
-        theTitle = title if title is not None else portfolio.title
+        theTitle = title if title is not None else self.portfolio.title
         output_file_path = tkinter.filedialog.asksaveasfilename(filetypes=[("PDF files", "*.pdf")])
         if len(output_file_path) > 0:
             if not output_file_path.endswith("pdf"): output_file_path += ".pdf"
             output_file_path = output_file_path.replace("/", "\\")
             doc = PDFDocument(output_file_path)
-            # reporter = PortfolioReporter(portfolio)
+            # reporter = PortfolioReporter(lf.portfolio)
             self.portfolio.make_analysis_report(doc, theTitle, detail)
             doc.output_document()
             self.launch_report(output_file_path)
@@ -239,7 +243,7 @@ class PortfolioBuilderEngine:
     @staticmethod
     def launch_report(report_file_path) -> None:
         # launch the pdf file for the report in the browser
-        os.system(f"start {report_file_path}")
+        os.system(f"open {report_file_path}")
 
     def open_portfolio(self) -> None:
         # prompt user for file to load using file dialog
@@ -268,18 +272,18 @@ class PortfolioBuilderEngine:
             prompt the user for a file name using file dialog
         """
 
-        line = f"title:{portfolio.title};"
+        line = f"title:{self.portfolio.title};"
         for item in self.portfolio.portfolio_items:
-            line += f"+{item.bond.cusip}:{item.quantity};"
+            line += f"+{item.cusip}:{item.quantity};"
 
-        if portfolio.file_path is None:
+        if self.portfolio.file_path is None:
             output_file_path = tkinter.filedialog.asksaveasfilename(filetypes=[("Portfolio files", "*.pflo")])
             if len(output_file_path) == 0: return
-            if not output_file_path.endswith("pflo"): output_file_path += ".pflo"
-            output_file_path = output_file_path.replace("/", "\\")
-            portfolio.file_path = output_file_path
 
-        with open(portfolio.file_path, "w") as output_file:
+            if not output_file_path.endswith("pflo"): output_file_path += ".pflo"
+            self.portfolio.file_path = output_file_path
+
+        with open(self.portfolio.file_path, "w") as output_file:
             output_file.write(line + "\n")
 
     def new_portfolio(self, title=None) -> None:
@@ -507,7 +511,7 @@ class PortfolioBuilderEngine:
         self.print_bonds(self.source_bond_group.best_income, doc, "Bonds with Best Yearly Income")
         self.print_bonds(self.source_bond_group.best_profit, doc, "Bonds with Best Profit")
         doc.output_document()
-        os.system(f"start {output_file_path}")
+        os.system(f"open {output_file_path}")
         self.make_portfolio_creation_file(self.source_bond_group.best_composite, self.source_bond_group.best_income, self.source_bond_group.best_profit)
 
     # endregion ---------------------------------------------------------------------------#

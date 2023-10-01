@@ -1,8 +1,9 @@
 import sys
 
-sys.path.append("D:/Development/FidelityPrograms/financial_utilities")
+# sys.path.append("D:/Development/FidelityPrograms/financial_utilities")
 from financial_utilities.portfolio_builder_engine import PortfolioBuilderEngine as PBE
 from financial_utilities.portfolio_builder_engine import InputSyntaxError
+
 
 def capture_actions() -> str:
     while True:

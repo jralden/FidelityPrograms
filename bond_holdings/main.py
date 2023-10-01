@@ -13,11 +13,14 @@ K.SHOW_AVAILABILITY = False
 
 
 def clean_int(int_string: str) -> int:
-    return int(int_string.replace(",", ""))
+    int_string = int_string.replace(",", "")
+    return int(int_string)
 
 
 def clean_float(float_string: str) -> float:
-    return float(float_string.replace(",", ""))
+    float_string = float_string.replace("$", "")
+    float_string = float_string.replace(",", "")
+    return float(float_string)
 
 
 def launch_report(report_file_path) -> None:

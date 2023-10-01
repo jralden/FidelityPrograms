@@ -1,6 +1,15 @@
-1,2,3,4,5,6,7,8,9,10,11,12
-CUSIP,Description,Maturity,Call Date,Coupon,S&P Rating,QTY,Purchase Date,Purchase Price,Most Recent Price,Most Recent Value,Notes
-075887AN9,BECTON DICKINSON &COBOND                7.00000% 08/01/2027,8/1/2027,n/a,7,BBB,"74,000",6/8/2022,115.06,111.133,"$82,238.42 ",
-254687DM5,DISNEY WALT CO      SER B NOTE          7.12500% 04/08/2028,4/8/2028,n/a,7.125,BBB+,"74,000",6/8/2022,116.233,114.189,"$84,499.86 ",
-00440EAC1,CHUBB INA HLDGS INC BOND                8.87500% 08/15/2029,8/15/2029,n/a,8.875,A,"66,000",6/8/2022,129.031,124.957,"$82,471.62 ",
-244199AZ8,DEERE &CO           BOND                8.10000% 05/15/2030,5/15/2030,n/a,8.1,A,"67,000",6/8/2022,127.634,126.116,"$84,497.72 ",
+﻿Account Number,Account Name,Symbol,Description,Quantity,Last Price,Last Price Change,Current Value,Today's Gain/Loss Dollar,Today's Gain/Loss Percent,Total Gain/Loss Dollar,Total Gain/Loss Percent,Percent Of Account,Cost Basis Total,Average Cost Basis,Type
+245043311,Mary's IRA,SPAXX**,FIDELITY GOVERNMENT MONEY MARKET,8354.08,$1.00,$0.00,$8354.08,n/a,n/a,n/a,n/a,2.22%,n/a,n/a,Cash
+245043311,Mary's IRA,00440EAC1,CHUBB INA HLDGS INC BOND 8.87500% 08/15/2029,66000,$114.055,-$0.334,$75276.30,-$220.44,-0.30%,-$6819.83,-8.31%,20.04%,$82096.13,--,Cash
+245043311,Mary's IRA,075887AN9,BECTON DICKINSON &CO BOND 7.00000% 08/01/2027,74000,$104.033,-$0.247,$76984.42,-$182.78,-0.24%,-$5540.53,-6.72%,20.49%,$82524.95,--,Cash
+245043311,Mary's IRA,244199AZ8,DEERE &CO BOND 8.10000% 05/15/2030,67000,$115.501,-$0.46,$77385.67,-$308.20,-0.40%,-$5477.51,-6.62%,20.60%,$82863.18,--,Cash
+245043311,Mary's IRA,254687DM5,DISNEY WALT CO SER B NOTE 7.12500% 04/08/2028,74000,$105.311,-$1.157,$77930.14,-$856.18,-1.09%,-$5636.91,-6.75%,20.74%,$83567.05,--,Cash
+245043311,Mary's IRA,912797FL6,UNITED STATES TREAS BILLS ZERO CPN 0.00000% 11/24/2023,20000,$99.131,+$0.012,$19826.20,+$2.40,+0.01%,+$337.20,+1.73%,5.28%,$19489.00,--,Cash
+245043311,Mary's IRA,FEMKX,FIDELITY EMERGING MARKETS,251.246,$33.38,-$0.17,$8386.59,-$42.72,-0.51%,+$2640.76,+45.95%,2.23%,$5745.83,$22.87,Cash
+245043311,Mary's IRA,SPY,SPDR S&P500 ETF TRUST TRUST UNIT DEPOSITARY RECEIPT,73,$432.23,+$1.81,$31552.79,+$132.13,+0.42%,+$21594.84,+216.86%,8.40%,$9957.95,$136.41,Cash
+
+"The data and information in this spreadsheet is provided to you solely for your use and is not for distribution. The spreadsheet is provided for informational purposes only, and is not intended to provide advice, nor should it be construed as an offer to sell, a solicitation of an offer to buy or a recommendation for any security by Fidelity or any third party. Data and information shown is based on information known to Fidelity as of the date it was exported and is subject to change. It should not be used in place of your account statements or trade confirmations and is not intended for tax reporting purposes. For more information on the data included in this spreadsheet, including any limitations thereof, go to Fidelity.com."
+
+"Brokerage services are provided by Fidelity Brokerage Services LLC, 900 Salem Street, Smithfield, RI 02917. Custody and other services provided by National Financial Services LLC. Both are Fidelity Investment companies and members SIPC, NYSE."
+
+"Date downloaded 09/26/2023 8:02 AM ET"
