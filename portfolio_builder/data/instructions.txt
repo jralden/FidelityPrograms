@@ -1,0 +1,45 @@
+new;                ****** start a new portfolio ******
+new:<title>;        ****** start a new portfolio with this title ******
+
+open;                         load portfolio from file. Launches a file load dialog.
+-----no-->load:<file_path>;             load portfolio from file.
+
+save;                       save portfolio to file. Launches a file save dialog if needed.
+save_as:;                   save portfolio to file. Launches a file save dialog
+
++<add_bond_ref>:<number>;       add bond to portfolio, or increase bond quantity if already in portfolio
+    <add_bond_ref> := <cusip> | <text> | <num> | >i | >p | >c
+
+
+-<existing_bond_ref>;                delete bond with given bond reference
+    <existing_bond_ref> :== <cusip> | <text> | <num>
+
+
+-<existing_bond_ref>:<number>;       decrease bond quantity
+
+
+clear;                      clear portfolio
+
+quit;                       exit program
+
+
+db[:<title>];               display portfolio - brief form, add subheading title
+dd[:<title>];               display portfolio - detailed form, add subheading title
+    * these don't create output named output files - creates a work file to launch pdf from
+
+
+sdb[:<title>];               save current brief portfolio report to file using this title
+sdd[:<title>];               save current detailed portfolio report to file using this title
+
+Q:<cusip>;                  query bond information
+
+
+help;                       display this file
+
+                    $$$$$$$$$$$$$ future $$$$$$$$$$$$$
+
+-last;                      remove last bond added to portfolio
+
+                   ****** replace portfolio item with a new one ******
+^<existing_bond_ref><=<new_bond_ref>:<num>;       replace portfolio item
+    <new_bond_ref> := <cusip> | >i | >p | >c

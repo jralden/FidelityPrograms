@@ -45,8 +45,10 @@ def load_csv_file(file_path: str) -> list[list[str]]:
            :return:    list of property lists
     """
     with open(file_path, 'r') as csv_file:
+        print(f"loading bonds.csv {file_path}")
         csv_reader = csv.reader(csv_file, delimiter=',')
         theList = list(csv_reader)
+        print(f"loaded {len(theList)} bonds")
         theList.pop(0)  # remove the index row
         theList.pop(0)  # remove the header
         csv_file.close()

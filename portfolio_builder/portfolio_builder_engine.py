@@ -1,17 +1,15 @@
 from typing import *
-import os, datetime,  tkinter, tkinter.simpledialog, tkinter.filedialog
+import os, datetime, tkinter, tkinter.simpledialog, tkinter.filedialog
 from enum import Enum
-
-# sys.path.append("D:/Development/FinancialDevelopment/FinancialUtilities/financial_utilities")
 import financial_utilities.constants as K
 # from financial_utilities import portfolio
 from financial_utilities.bond import Bond, BondGroup
 from financial_utilities.portfolio import Portfolio
 from financial_utilities.pdf_document import PDFDocument
-# from financial_utilities.format import Format as F
 
 
 class F:
+    """ Static methods for formatting numbers for display  """
 
     @classmethod
     def format_dollars(cls, num) -> str: return "${:,.2f}".format(num)
@@ -470,7 +468,7 @@ class PortfolioBuilderEngine:
         line, bond_index = self.make_portfolio_line(selected_list, bond_index+1)
         lines.append(line + '\n')
 
-    def make_portfolio_line(self, theBondList: list, starting_bond_index: int) -> Tuple[str, int]:
+    def make_portfolio_line(self, theBondList: list, starting_bond_index: int) -> tuple[str, int]:
         line = ''
         invested = 0.0
         bond_index = starting_bond_index - 1
