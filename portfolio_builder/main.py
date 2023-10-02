@@ -1,8 +1,6 @@
-import sys
-
-# sys.path.append("D:/Development/FidelityPrograms/financial_utilities")
-from financial_utilities.portfolio_builder_engine import PortfolioBuilderEngine as PBE
-from financial_utilities.portfolio_builder_engine import InputSyntaxError
+# This is the main program for the portfolio builder.
+from portfolio_builder.portfolio_builder_engine import PortfolioBuilderEngine as PBE
+from portfolio_builder.portfolio_builder_engine import InputSyntaxError
 
 
 def capture_actions() -> str:
