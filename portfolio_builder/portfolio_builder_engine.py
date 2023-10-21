@@ -253,7 +253,10 @@ class PortfolioBuilderEngine:
     @staticmethod
     def launch_report(report_file_path) -> None:
         # launch the pdf file for the report in the browser
-        os.system(f"open {report_file_path}")
+        # os.system(f"open {report_file_path}")
+        """ in macOS launch the pdf file for the report in the Chrome browser """
+        os.system(f"open -a /Applications/Google\ Chrome.app {report_file_path}")
+
 
     def open_portfolio(self) -> None:
         # prompt user for file to load using file dialog
@@ -521,7 +524,9 @@ class PortfolioBuilderEngine:
         self.print_bonds(self.source_bond_group.best_income, doc, "Bonds with Best Yearly Income")
         self.print_bonds(self.source_bond_group.best_profit, doc, "Bonds with Best Profit")
         doc.output_document()
-        os.system(f"open {output_file_path}")
+        # os.system(f"open {output_file_path}")
+        self.launch_report(output_file_path)
+
         self.make_portfolio_creation_file(self.source_bond_group.best_composite, self.source_bond_group.best_income, self.source_bond_group.best_profit)
 
     # endregion ---------------------------------------------------------------------------#

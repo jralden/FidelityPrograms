@@ -1,17 +1,6 @@
-# from __future__ import annotations
-# from typing import TYPE_CHECKING
 import datetime
 import numpy as np
 import financial_utilities.constants as K
-"""
-if TYPE_CHECKING:
-    from portfolio import PortfolioItem
-    from bond import Bond
-"""
-"""
-from  financial_utilities.portfolio import PortfolioItem
-from  financial_utilities.bond import Bond
-"""
 
 
 class PaymentSource:
@@ -53,62 +42,53 @@ class PaymentSource:
         self._profit: float = 0.0
 
     @property
-    def cusip(self) -> str:
-        return self._cusip
+    def cusip(self) -> str: return self._cusip
 
     @property
-    def description(self) -> str:
-        return self._description
+    def description(self) -> str: return self._description
 
     @property
-    def coupon(self) -> float:
-        return self._coupon
+    def coupon(self) -> float: return self._coupon
 
     @property
     def maturity(self) -> str: return self._maturity_date
 
     @property
-    def maturity_date(self) -> str:
-        return self._maturity_date
+    def maturity_date(self) -> str: return self._maturity_date
 
     @property
-    def maturity_year(self) -> int:
-        return self._maturity_year
+    def maturity_year(self) -> int: return self._maturity_year
 
     @property
-    def maturity_month(self) -> int:
-        return self._maturity_month
+    def maturity_month(self) -> int: return self._maturity_month
 
     @property
-    def maturity_day_of_month(self) -> int:
-        return self._maturity_day_of_month
+    def maturity_day_of_month(self) -> int: return self._maturity_day_of_month
 
     @property
-    def first_coupon_month(self) -> int:
-        return self._first_coupon_month
+    def first_coupon_month(self) -> int: return self._first_coupon_month
 
     @property
-    def purchase_month(self) -> int:
-        return self._purchase_month
+    def purchase_month(self) -> int: return self._purchase_month
 
     @property
-    def purchase_date(self) -> str:
-        return self._purchase_date
+    def purchase_date(self) -> str: return self._purchase_date
 
     @property
     def purchase_day_of_month(self) -> int:
         return self._purchase_day_of_month
 
     @property
-    def sp_rating(self) -> str:
-        return self._sp_rating
+    def sp_rating(self) -> str: return self._sp_rating
 
     @property
     def rating(self): return self._sp_rating
 
     @property
-    def ask(self) -> float:
-        return self._ask
+    def ask(self) -> float: return self._ask
+
+    @property
+    def price(self): return self._ask
 
     @property
     def payment_schedule(self): return self._payment_schedule             # matrix per year X month  => coupon/2
@@ -218,8 +198,10 @@ class PaymentSource:
             tax_savings = tax_savings()
             self._total_return_pretax = 1000 + self.total_interest(1000) + tax_savings
             self._total_return_posttax = 1000 + (self.total_interest(1000) * (1.0 - K.TAX_RATE)) + tax_savings
-            self._profit = self.total_return_posttax - (self.ask * 10)
+            # self._profit = self.total_return_posttax - (self.ask * 10)
         else:
             self._total_return_pretax = 1000 + self.total_interest(1000)
             self._total_return_posttax = self.total_return_pretax
-            self._profit = self.total_return_posttax - (self.ask * 10)
+            # self._profit = self.total_return_posttax - (self.ask * 10)
+
+        self._profit = self.total_return_posttax - (self.ask * 10)

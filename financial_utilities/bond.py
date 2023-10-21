@@ -2,20 +2,28 @@ import datetime
 import traceback
 # import numpy as np
 from enum import Enum
-from typing import *
 import csv
 import financial_utilities.constants as K
 from financial_utilities.payment_source import PaymentSource
 
 # region BondFields enum
 
+"""
+    BondField is an enum that defines the fields in the bond csv file
+    that is downloaded from the Fidelity website. It represents the available
+    bonds that can be purchased matching the criteria in the bond screening
+    query
+"""
+
 
 class BondField(Enum):
     Cusip = 0
+    State = 1
     Description = 2
     Coupon = 3
     Maturity_Date = 4
     Next_Call_Date = 5
+    Moody_Rating = 6
     SP_Rating = 7
     Bid = 8
     Ask = 9
@@ -217,7 +225,7 @@ class Bond(PaymentSource):
         if value.__contains__("--"): return 0.0
         return float(value)
 
-    def get_purchase_month_and_day(self) -> Tuple[int, int]:
+    def get_purchase_month_and_day(self) -> tuple[int, int]:
         return self._purchase_month, self._purchase_day_of_month
 
     def total_interest(self, number_bonds: int) -> float:    # multiply by number of shares to get $ interest amount
@@ -286,7 +294,6 @@ class BondGroup:
             return False
 
         def protection_status_matches(bond_is_callable: bool) -> bool:
-            # sourcery skip: boolean-if-exp-identity, remove-unnecessary-cast
             return False if K.CALL_PROTECTED and bond_is_callable else True
 
         def report_results():
@@ -295,7 +302,7 @@ class BondGroup:
             # print(f"   bonds with no coupon = {no_coupon}")
             print(f"Loaded {self.length()} bonds")
 
-        def read_bond_csv(file_path: str) -> List[List[str]]:
+        def read_bond_csv(file_path: str) -> list[list[str]]:
             """
                 Reads a csv file and returns a list of bond
                 property lists

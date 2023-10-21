@@ -24,8 +24,10 @@ def clean_float(float_string: str) -> float:
 
 
 def launch_report(report_file_path) -> None:
+    """in macOS launch the pdf file in the Chrome browser"""
+
     """ in macOS launch the pdf file for the report in the browser """
-    os.system(f"open {report_file_path}")
+    # os.system(f"open {report_file_path}")
 
 
 def save_report(portfolio: Portfolio, title=None, detail=True) -> None:
